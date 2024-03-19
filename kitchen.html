@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Zen+Dots&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logogcv1.png">
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8214545730626805"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./imgslider2.css">
+    <title>Chava'sConstruction-Kitchen</title>
+    <!------------This index is for gallary seperate from landing page index-->
+</head>
+
+<body class="kit">
+    <header>
+        <div class="sub-sub-header"></div>
+        <div id="sub-top-small-header">
+            <p>By <i class="material-icons">copyrights</i>Chava'sConstruction.Online</p>
+        </div>
+        
+        <nav>
+            <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="material-icons .icon-2">list</i>
+                </label>
+                <label class="logo">Gallery</label>
+            <div class="master-nav-row">
+                <ul>
+                    <li><a href="index.html" class="btn">Home</a></li>
+                    <li class="active"><a href="gallary8.3.html" class="btn">Gallery</a></li>
+                    <li><a href="about-usv9.html" class="btn">About-Us</a></li>
+                    <li><a href="contact-us.html" class="btn">Contact-us</a></li>
+                    <li><a href="#" class="btn">Store</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="top-sub-menu">
+        <div class="sub-menu">     
+            <a href="./windows&door.html">Windows & Doors</a>
+            <a href="./kitchen.html">Kitchen</a>
+            <a href="./electrical.html">Electrical</a>
+             <a href="./Restroom&Bath.html">Restroom & Bath</a>
+        </div>
+
+        <div class="sub-menu-1 bottom-sub-menu">  
+            <a href="./roof&patios.html">Roof & Patio's</a>
+            <a href="./floor.html">Floor & Tiles</a>
+            <a href="./custom.html">Custom & Bath</a>
+        </div>  
+        </div>      
+    </header>
+
+    <div class="content">
+        <div class="sub-title">
+            <h2>Kitchen</h2>
+        </div>   
+        <div class="slider-container">
+            <img src="images/kitchen002.jpeg">
+            <img src="images/kitchen01.jpeg">
+            <img src="images/kitchenpic003.jpeg">
+            <img src="images/kitchenpic005.jpeg">
+            <img src="images/kitchenpic007.jpeg">
+
+            <div class="left-right-slides">
+                <span onclick="left-right-slides(1)"></span>
+                <span onclick="left-right-slides(2)"></span>  
+            </div>
+
+            <div class="sliders left" onclick="side_slide(-1)">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                    </span>
+              </div>
+            <div class="sliders right" onclick="side_slide(1)">
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                    </span>
+              </div>
+
+              <script>
+                var indexValue = 1;
+                showImg(indexValue);
+                function btm_slide(e){showImg(indexValue = e);}
+                function side_slide(e){showImg(indexValue += e);}
+                function showImg(e){
+                  var i;
+                  const img = document.querySelectorAll('img');
+                  const slider = document.querySelectorAll('.btm-slides span');
+                  if(e > img.length){indexValue = 1}
+                  if(e < 1){indexValue = img.length}
+                  for(i = 0; i < img.length; i++){
+                    img[i].style.display = "none";
+                  }
+                  for(i = 0; i < slider.length; i++){
+                    slider[i].style.background = "rgba(255,255,255,0.1)";
+                  }
+                  img[indexValue-1].style.display = "block";
+                  slider[indexValue-1].style.background = "white";
+                }
+              </script>
+
+           <div class="left-right-slides">
+            <span onclick="left-right-slides(1)" style="background: black"></span>
+        </div>
+        <div class="sliders left" onclick="side_slide(-1)">
+        <span class="fas fa-angle-left" aria-hidden="true">
+            
+        </span>
+        </div>
+        <div class="sliders right" onclick="side_slide(1)">
+        <span class="fas fa-angle-right" aria-hidden="true">
+        </span>    
+        </div>
+        </div>
+        </div>
+        <footer>Cyber Built by Luis.Amaya</footer>
+        <div class="sub-sub-header"></div>
+        </body>
+        </html>
