@@ -256,8 +256,7 @@ border: 0;
 /* ------------------- */
 
 .bg-marble {
-  background-image: url(images/product2lupo.jpeg);
-}
+  background: white;
 
 .large-button {
   font-size: 2rem;
