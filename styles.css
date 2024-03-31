@@ -97,8 +97,8 @@ body {
 /* make images easier */
 img,
 picutre {
-  max-width: 30%;
-  display: block;
+  max-width: 10%;
+/*   display: block; */
 }
 
 /* make form elements easier */
