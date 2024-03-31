@@ -86,7 +86,7 @@ body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
   color: hsl( var(--clr-white) );
-  background-image: url('./images/product2lupo.jpeg') ;
+  background-image: url("./images/product2lupo.jpeg");
   line-height: 1.5;
   min-height: 100vh;
   display: grid;
