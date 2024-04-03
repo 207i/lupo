@@ -81,6 +81,10 @@ p {
   font-weight: 400;
 }
 
+.material-sized {
+  font-size: 41px;  
+}
+
 /* set up the body */
 body {
   font-family: var(--ff-sans-normal);
