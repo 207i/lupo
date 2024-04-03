@@ -325,7 +325,7 @@ a.active,a:hover {
 }
 
 .material-sized {
-  font-sized: xxLarge;
+  font-size: xxLarge;
 }
 /*----mobile-------*/
 @media (min-width: 319px) and (max-width: 480px) {
