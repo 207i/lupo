@@ -140,6 +140,15 @@ select {
   font-size: larger;
 }
 
+.p7 {
+  color: white;
+  margin: 5px;
+  background: hsl( var(--clr-dark) / 0.05);
+  backdrop-filter: blur(1.5rem); 
+  font-family: 'Acme', sans-serif;
+  font-size: larger;
+}
+
 .outline {
   font-size: 40px;
   font-weight: 700;
