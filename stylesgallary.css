@@ -324,6 +324,9 @@ a.active,a:hover {
   background: lightsalmon;
 }
 
+.material-sized {
+  font-sized: xxLarge;
+}
 /*----mobile-------*/
 @media (min-width: 319px) and (max-width: 480px) {
   label.logo {
