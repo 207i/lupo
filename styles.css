@@ -440,7 +440,7 @@ border: 0;
   img,
   picutre {
       max-width: 30%;
-      display: block;
+/*       display: block; */
   }
 }
 
