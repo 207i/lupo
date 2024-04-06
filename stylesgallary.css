@@ -257,7 +257,7 @@ h3 {
 /*-------top-small-header-end------*/
 /*----------Nav-start----------------------*/
 nav {
-  background: radial-gradient(skyblue, transparent);
+  background:  Linear-gradient(90deg, #00a2ff, #09f1b8, #fed90f, red);
   height: 120px;
   width: 100%;
 }
