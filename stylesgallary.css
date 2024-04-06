@@ -475,7 +475,7 @@ nav ul li a {
 footer {
   width: 100%;
   height: 120px;
-  background: dodgerblue;
+  background: Linear-gradient(90deg, #00a2ff, #09f1b8, #fed90f, red)
   border-top: black 2px solid;
   text-align: center;
   
