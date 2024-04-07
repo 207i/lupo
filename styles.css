@@ -157,7 +157,7 @@ select {
   font-size: 40px;
   font-weight: 700;
   color: black;
-  -webkit-text-stroke: 2px whitesmoke;
+  -webkit-text-stroke: 2px black;
 }
 
 .flex {
