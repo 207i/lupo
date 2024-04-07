@@ -218,7 +218,7 @@ border: 0;
 .google_translate {
   width: 100%;
   height: 80px;
-  background-image: Linear-gradient(90deg, red, #fed90f, #00a2ff, #09f1b8);
+  background: Linear-gradient(90deg, #00a2ff, #09f1b8, #fed90f, red);
   display: inline-block;
   text-align: center;
   border-bottom: 2px solid black;
