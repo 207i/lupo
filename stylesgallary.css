@@ -325,8 +325,10 @@ a.active,a:hover {
 }
 
 .material-sized {
-  font-size: xxLarge;
+  font-size: 40px;
+  margin-top: 20px;
 }
+
 /*----mobile-------*/
 @media (min-width: 319px) and (max-width: 480px) {
   label.logo {
