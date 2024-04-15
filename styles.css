@@ -148,7 +148,7 @@ select {
   color: white;
   margin: 5px;
   background: hsl( var(--clr-dark) / 0.05);
-  backdrop-filter: blur(1.5rem); 
+  backdrop-filter: blur(.3rem); 
   font-family: 'Acme', sans-serif;
   font-size: larger;
 }
