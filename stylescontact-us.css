@@ -1854,8 +1854,8 @@ marquee {
     width: 100%;
     height: auto;
     text-align: center;
-    background: radial-gradient(skyblue, transparent);
-/*     background: url("./images/Logos/halocyber-001 (1).jpg") repeat center center / contain; */
+/*     background: radial-gradient(skyblue, transparent); */
+    background: url("./images/backgroundLupo.mp4") repeat center center / contain;
 }
 
 .contact {
