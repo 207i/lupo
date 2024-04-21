@@ -284,7 +284,7 @@ ul {
     font-size: 1rem;
     font-weight: 600;
     color: var(--black-high);
-    background-color: gray;
+/*     background-color: gray; */
     box-shadow: var(--btn-shadow) !important;
     border-radius: 4px;
     cursor: pointer;
