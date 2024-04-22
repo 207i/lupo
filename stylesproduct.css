@@ -281,7 +281,7 @@ nav .second-menu a.active,a:hover {
   label.logo {
       font-size: 45px;
       padding-left: 20px;
-      color: orangered;
+      color: -webkit-text-stroke: 2px black;
   }
 
   nav ul li a {
