@@ -166,8 +166,8 @@ h3 {
 
 body {
   font-family: "Inter, sans-serif";
-  background: linear-gradient(lightgray,gray, darkgray);
-
+/*   background: linear-gradient(lightgray,gray, darkgray);
+ */
 }
 
 /*----------Nav-start------------------------*/
