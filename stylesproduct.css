@@ -509,7 +509,8 @@ font-family: fantasy;
 footer {
   width: 100%;
   height: 100px;
-  background: dodgerblue;
+  background: Linear-gradient(90deg, #00a2ff, #09f1b8, #fed90f, red);
+/*   background: dodgerblue; */
   border-top: black 2px solid;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
