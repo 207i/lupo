@@ -113,6 +113,10 @@ h3 {
   font-weight: var(--fw-700);
 }
 
+.ctabutton {
+  text-align: center;
+}
+
 /* utilities */
 .flex {
   display: flex;
