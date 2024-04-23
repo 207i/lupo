@@ -183,7 +183,7 @@ nav {
 }
 
 label.logo {
-  color: black;
+  color: skyblue;
   font-size: 45px;
   line-height: 110px;
   padding: 0 100px;
@@ -283,7 +283,7 @@ nav .second-menu a.active,a:hover {
 
 @media (max-width: 653px) {
   label.logo {
-      font-size: 45px;
+      font-size: 65px;
       padding-left: 20px;
       -webkit-text-stroke: 2px black;
   }
