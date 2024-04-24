@@ -224,6 +224,10 @@ ul {
     --bs-gutter-x: 30px;
 }
 
+.space1 {
+    margin-left: 40px;	
+}
+
 .box {
     padding: 30px;
     border-radius: 5px;
