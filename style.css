@@ -138,6 +138,13 @@ ul {
 	right: 0;
 }
 
+/* singlep- heading font attributes */
+.singlep {    
+    text-align: center;
+    margin-top: 30px;
+    font-size: Large;
+}
+
 /* Animation */
 .cmps span > b {
 	animation-name: loading;
