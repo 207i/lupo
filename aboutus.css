@@ -2256,7 +2256,7 @@ marquee {
     }
 
     .menu-item a.active {
-        color: var(--blue) !important;
+        color: skyblue !important;
     }
 
     .menu-item a.active::before {
