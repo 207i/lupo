@@ -2421,7 +2421,7 @@ marquee {
         width: 70%;
         box-shadow: none;
         color: var(--white);
-        background-color: var(--nav-drop);
+        background-color: skyblue;
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
