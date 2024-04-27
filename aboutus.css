@@ -91,6 +91,10 @@ ul {
     margin-top: 50px;	
 }
 
+.adspace1 {
+    margin: 300px;	
+}
+
 /* body-general */
 .page-loader {
     position: fixed;
