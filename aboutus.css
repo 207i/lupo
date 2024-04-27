@@ -87,6 +87,10 @@ ul {
     list-style: none;
 }
 
+.buffer-space {
+    margin-top: 50px;	
+}
+
 /* body-general */
 .page-loader {
     position: fixed;
