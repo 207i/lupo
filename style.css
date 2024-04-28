@@ -1615,6 +1615,10 @@ body.dark .dark-light i.sun,
     line-height: 25px;
 }
 
+.span-2 {
+     text-align: start;	
+}
+
 /* Blog */
 .blog {
     margin: 100px auto;
