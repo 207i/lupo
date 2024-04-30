@@ -227,9 +227,10 @@ ul {
 .img-sm {
     border: solid 2px red;
 }
-.text-center {
+
+/* .text-center {
     max-width: 90%;
-}
+} */
 
 .row {
     --bs-gutter-x: 30px;
