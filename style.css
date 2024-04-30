@@ -199,6 +199,10 @@ ul {
     }
 }
 
+.mar1 {
+	margin-top: 70px;
+}
+
 .container {
     margin: 0 auto !important;
     --bs-gutter-x: 15px !important;
