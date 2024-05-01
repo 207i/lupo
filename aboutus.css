@@ -95,6 +95,15 @@ ul {
     margin: 200px;	
 }
 
+// <uniquifier>: Use a unique and descriptive class name
+
+
+.oswald-<blogfont1> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <300>;
+  font-style: normal;
+}
 /* body-general */
 .page-loader {
     position: fixed;
