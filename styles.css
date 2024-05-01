@@ -368,7 +368,7 @@ border: 0;
       background: whitesmoke;
       border-radius: 7px;
       padding: 7px 13px;
-      color: black;
+      color: white;
   }
 
   .primary-navigation[data-visible="true"] {
