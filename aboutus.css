@@ -70,6 +70,10 @@ a:active {
     color: var(--main-color) !important;
 }
 
+#ad-specs {
+    	
+}
+
 h1,h2,h3,h4,h5,h6 {
     color: var(--black-high);
     line-height: 1.3;
