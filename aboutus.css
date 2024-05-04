@@ -296,8 +296,8 @@ ul {
     padding: 11px 18px;
     font-size: 1rem;
     font-weight: 600;
-    color: #ffffff;
-    background-color: transparent;
+    color: navajowhite;
+    background-color: darkgrey;
     cursor: pointer;
     border: var(--btn-coll-border);
     outline: none;
