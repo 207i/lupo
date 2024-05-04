@@ -2530,7 +2530,7 @@ marquee {
 
 @media screen and (max-width: 768px) {
     .products .row div[class^="col"] {
-        width: 50% !important;
+        width: 100% !important;
     }
 
     .container-footer div[class^="col"] {
