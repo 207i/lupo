@@ -2586,7 +2586,7 @@ marquee {
 
 @media screen and (max-width: 600px) {
     .products .row div[class^="col"] {
-        width: 80% !important;
+        width: 100% !important;
     }
 }
 
