@@ -91,8 +91,8 @@ const checkBgMode = (mode) => {
             break;
             case 'dark-mode':
                 body.classList.add("dark");
-                navLogo.src = `${domain}/images/logo3.png`;
-                footerLogo.src = `${domain}/images/logo3.png`;
+                navLogo.src = `${domain}/images/lupos-artLogobyDesigner.png`;
+                footerLogo.src = `${domain}/images/lupos-artLogobyDesigner.png`;
             break;
             default:
                 return;
