@@ -328,7 +328,7 @@ ul {
 /* Header & Menu ( nav ) */
 .header {
     background-image: Linear-gradient(90deg, red, #fed90f, #00a2ff, #09f1b8);
-    height: 70px;
+    height: 120px;
     border-bottom: 1px solid white;
     z-index: 9999 !important;
 }
