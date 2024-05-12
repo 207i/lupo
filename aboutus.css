@@ -1837,7 +1837,7 @@ marquee {
     height: 100%;
 }
 
-/* Contact */
+/* Contact Section */
 .contact-hero {
     display: flex;
     align-items: center;
@@ -1848,14 +1848,10 @@ marquee {
     background: url("../images/shopping.gif") repeat center center / contain;
 }
 
-.contact {
-    margin: 50px auto;
-}
-
+.contact,
 .form-details {
     margin: 50px auto;
 }
-
 .form-details .container {
     padding: 40px;
     border: 1px solid var(--gray);
