@@ -1777,21 +1777,15 @@ marquee {
 }
 
  /* Standard styles */
-.about-us h1 {
-    padding: 10px 0;
-    font-size: 7rem;
-    line-height: 1.5rem;
-    text-align: center;
-    margin: 0px 0px 80px 0px;
-} 
-
+.about-us h1,
 .about-us-2 h1 {
     padding: 10px 0;
-    font-size: 3rem;
+    font-size: 7rem; /* For .about-us h1 */
+    font-size: 3rem; /* For .about-us-2 h1 */
     line-height: 1.5rem;
     text-align: center;
     margin: 0px 0px 80px 0px;
-} 
+}
 
 /* Vendor-specific prefixes for Flexbox */
 .contact-hero {
