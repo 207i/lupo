@@ -274,7 +274,7 @@ document.addEventListener("scroll", () => {
 
 backToTopButton.addEventListener("click", goToTop);
 
-Cookie
+// Cookie
 const cookieWrb = document.querySelector(".cookie"),
 btnAction = cookieWrb.querySelector(".btn-actions button");
 
