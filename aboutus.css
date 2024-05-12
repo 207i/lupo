@@ -1776,8 +1776,8 @@ marquee {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
-
- .about-us h1 {
+ /* Standard styles */
+.about-us h1 {
     padding: 10px 0;
     font-size: 7rem;
     line-height: 1.5rem;
@@ -1792,6 +1792,42 @@ marquee {
     text-align: center;
     margin: 0px 0px 80px 0px;
 } 
+
+/* Vendor-specific prefixes for Flexbox */
+.contact-hero {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: url("../images/shopping.gif") repeat center center / contain;
+}
+
+/* Vendor-specific prefixes for Flexbox */
+.contact {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    margin: 50px auto;
+}
+
+/* Vendor-specific prefixes for Flexbox */
+.form-details {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    margin: 50px auto;
+}
+
 
 /* .about-us h1 {
     font-family: 'Acme', serif;
