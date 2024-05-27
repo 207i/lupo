@@ -2651,6 +2651,7 @@ marquee {
     .container-footer div[class^="col"] a, p {
         margin-bottom: 2rem;
         font-weight: 600;
+	margin-top: 50px;    
     }
 
     .go-to-link {
