@@ -742,6 +742,10 @@ body.dark .dark-light i.sun,
     text-transform: capitalize;
 }
 
+.title-sec2 {
+    text-align: start;	
+}
+
 .sub-title {
     color: var(--black-high);
     font-size: 2.1rem;
