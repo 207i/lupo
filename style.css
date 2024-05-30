@@ -1582,7 +1582,7 @@ body.dark .dark-light i.sun,
 /* -> Single Page Product */
 .product-details {
     margin: 33px auto;
-    padding: 50px;
+/*     padding: 50px; */
 }
 
 .product-details div[class^="col"] {
