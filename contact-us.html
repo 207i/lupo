@@ -110,7 +110,7 @@
                 </div>
             </div>
         </section>
-        <section class="form-details">
+<!--         <section class="form-details">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-lg-6 form">
@@ -137,7 +137,36 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+        <section class="form-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 form">
+                    <form action="send_email.php" method="post" id="contactForm">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required />
+                        
+                        <label for="email">Your E-Mail Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your E-Mail Address" required />
+                        
+                        <label for="subject">Your Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Your Subject" required />
+                        
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                        
+                        <button type="submit" class="btn-normal">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6 col-lg-6 people">
+                    <div>
+                        <!-- Additional content can go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
         <section class="newsletter">
             <div class="container">
                 <div class="row align-items-center">
