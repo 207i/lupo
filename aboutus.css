@@ -655,6 +655,11 @@ body.dark .dark-light i.moon {
     color: var(--search-color);
 }
 
+.link-bg1 {
+    background-color: blue;
+    font-type: bold;
+}
+
 .mobile-menu {
     display: none;
 }
