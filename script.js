@@ -142,37 +142,37 @@ const modeLD = (() => {
     }
 })();
 
-// const modeLD = (() => {
-//     let httpRequest;
-    // modeToggle.addEventListener('click', makeRequest);
+const modeLD = (() => {
+    let httpRequest;
+    modeToggle.addEventListener('click', makeRequest);
     
-    // function makeRequest() {
-    //     httpRequest = new XMLHttpRequest();
+    function makeRequest() {
+        httpRequest = new XMLHttpRequest();
     
-    //     if (!httpRequest) {
-    //         console.log('Cannot create an XMLHTTP instance');
-    //         return false;
-    //     }
+        if (!httpRequest) {
+            console.log('Cannot create an XMLHTTP instance');
+            return false;
+        }
         
-    //     httpRequest.onreadystatechange = showContents;
+        httpRequest.onreadystatechange = showContents;
         
-    //     let path = window.location.pathname;
-    //     let page = path.split("/").pop();
-    //     httpRequest.open('GET', `${page}`);
-    //     httpRequest.send();
-    // }
+        let path = window.location.pathname;
+        let page = path.split("/").pop();
+        httpRequest.open('GET', `${page}`);
+        httpRequest.send();
+    }
     
-    // function showContents() {
-    //     if (httpRequest.readyState === XMLHttpRequest.DONE) {
-    //         if (httpRequest.status === 200) {
-    //             let mode = localStorage.getItem("mode");
-    //             checkBgMode(mode);
-    //         } else {
-    //             console.log('There was a problem with the request.');
-    //         }
-    //     }
-    // }
-// })();
+    function showContents() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+                let mode = localStorage.getItem("mode");
+                checkBgMode(mode);
+            } else {
+                console.log('There was a problem with the request.');
+            }
+        }
+    }
+})();
 
 // dark and light mode   
 modeToggle.addEventListener("click", () => {
