@@ -58,13 +58,12 @@ if (welcome) {
         localStorage.setItem("welcome", "d-none");
     }, 3000);
 
-    welcomeCls.addEventListener("click", () => {
-        setTimeout(() => {
-            welcome.classList.add("d-none");
-            localStorage.setItem("welcome", "d-none");
-        }, 500);
+    welcome.addEventListener("click", () => {
+        welcome.classList.add("d-none");
+        localStorage.setItem("welcome", "d-none");
     });
 }
+
 
 // Check Background Mode
 const checkBgMode = (mode) => {
