@@ -43,141 +43,260 @@ window.onscroll = () => {
 
     const modeOnload = localStorage.getItem("mode");
     checkBgMode(modeOnload);
-// Simplified Welcome Alert
-const welcome = document.querySelector(".welcome-alert");
-const welcomeCls = document.querySelector(".welcome");
-const welcomeOnload = localStorage.getItem("welcome");
 
-if (welcomeOnload === "d-none") {
-    welcome.classList.add("d-none");
-}
+    // Simplified welcome alert code
+const welcome = document.querySelector(".welcome-alert");
 
 if (welcome) {
     setTimeout(() => {
-        welcome.classList.add("d-none");
-        localStorage.setItem("welcome", "d-none");
+        welcome.style.display = "none";
     }, 3000);
-
-    welcome.addEventListener("click", () => {
-        welcome.classList.add("d-none");
-        localStorage.setItem("welcome", "d-none");
-    });
 }
 
+welcome?.addEventListener("click", () => {
+    welcome.style.display = "none";
+});
+  
+    // const welcome = document.querySelector(".welcome-alert");
+    // const welcomeCls = document.querySelector(".welcome");
+    // const welcomeOnload = localStorage.getItem("welcome");
 
-// Check Background Mode
-const checkBgMode = (mode) => {
-    if (mode) {
-        const logoSrc = `${domain}/images/lupos-artLogobyDesigner.png`;
-        if (mode === 'dark-mode') {
-            body.classList.add("dark");
-        }
-        navLogo.src = logoSrc;
-        footerLogo.src = logoSrc;
-    }
+    // if (welcomeOnload && welcomeOnload === "d-none") {
+    //     welcome.classList.add("d-none");
+    // }
+
+    // setTimeout(() => {
+    //     welcome.classList.add("d-none");
+    //     localStorage.setItem("welcome", "d-none");
+    // }, 3000);
+
+    // welcomeCls.addEventListener("click", e => {
+    //     const touch = e.target;
+    //     if (touch.classList.contains("welcome")) {
+    //         setTimeout(() => {
+    //             welcome.classList.add("d-none");
+    //             localStorage.setItem("welcome", "d-none");
+    //         }, 500);
+    //     }
+    // });
 };
 
-// Mode Toggle and AJAX Request
+
+const checkBgMode = (mode) => {
+    if(mode) {
+        switch(mode) {
+            case 'light-mode':
+                navLogo.src = `${domain}/images/logo3.png`;
+                footerLogo.src = `${domain}/images/logo3.png`;
+            break;
+            case 'dark-mode':
+                body.classList.add("dark");
+                navLogo.src = `${domain}/images/logo3.png`;
+                footerLogo.src = `${domain}/images/logo3.png`;
+            break;
+            default:
+                return;
+        }
+    }
+}
+
+// Light & Dark mode, Real Time | Localstorage Changes
 const modeLD = (() => {
-    const makeRequest = () => {
-        const httpRequest = new XMLHttpRequest();
+    let httpRequest;
+    modeToggle.addEventListener('click', makeRequest);
+    
+    function makeRequest() {
+        httpRequest = new XMLHttpRequest();
+    
         if (!httpRequest) {
             console.log('Cannot create an XMLHTTP instance');
-            return;
+            return false;
         }
-
-        httpRequest.onreadystatechange = () => {
-            if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                if (httpRequest.status === 200) {
-                    let mode = localStorage.getItem("mode");
-                    checkBgMode(mode);
-                } else {
-                    console.log('There was a problem with the request.');
-                }
-            }
-        };
-
-        const path = window.location.pathname;
-        const page = path.split("/").pop();
+        
+        httpRequest.onreadystatechange = showContents;
+        httpRequest.onerror = handleRequestError; // Add this line
+        
+        let path = window.location.pathname;
+        let page = path.split("/").pop();
         httpRequest.open('GET', `${page}`);
         httpRequest.send();
-    };
+    }
+    
+    function showContents() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+                let mode = localStorage.getItem("mode");
+                checkBgMode(mode);
+            } else {
+                console.log('There was a problem with the request.');
+                handleRequestError(); // Handle the error
+            }
+        }
+    }
 
-    modeToggle.addEventListener('click', makeRequest);
+    // Define a function to handle errors
+    function handleRequestError() {
+        // Implement your error handling logic here
+        console.log('An error occurred during the request.');
+        // You can display an error message to the user or take other appropriate actions.
+    }
 })();
 
-// Toggle Dark and Light Mode
+// const modeLD = (() => {
+//     let httpRequest;
+    // modeToggle.addEventListener('click', makeRequest);
+    
+    // function makeRequest() {
+    //     httpRequest = new XMLHttpRequest();
+    
+    //     if (!httpRequest) {
+    //         console.log('Cannot create an XMLHTTP instance');
+    //         return false;
+    //     }
+        
+    //     httpRequest.onreadystatechange = showContents;
+        
+    //     let path = window.location.pathname;
+    //     let page = path.split("/").pop();
+    //     httpRequest.open('GET', `${page}`);
+    //     httpRequest.send();
+    // }
+    
+    // function showContents() {
+    //     if (httpRequest.readyState === XMLHttpRequest.DONE) {
+    //         if (httpRequest.status === 200) {
+    //             let mode = localStorage.getItem("mode");
+    //             checkBgMode(mode);
+    //         } else {
+    //             console.log('There was a problem with the request.');
+    //         }
+    //     }
+    // }
+// })();
+
+// dark and light mode   
 modeToggle.addEventListener("click", () => {
     body.classList.toggle("dark");
     modeToggle.classList.toggle("active");
-    localStorage.setItem("mode", body.classList.contains("dark") ? "dark-mode" : "light-mode");
+    if(!window.location.host) window.location.href=window.location.href;
+
+    if(!body.classList.contains("dark")) {
+        localStorage.setItem("mode", "light-mode");
+    } else {
+        localStorage.setItem("mode", "dark-mode");
+    }
 });
 
-// Search Box Toggle
+
+// searchBox
 searchToggle.addEventListener("click", () => {
     searchToggle.classList.toggle("active");
 });
 
-// Checkout Redirect
+// Checkout
 const checkOut = document.querySelector(".shopping-cart");
-checkOut.addEventListener("click", () => {
+checkOut.onclick = () => {
     location.href = `${domain}/cart.html`;
-});
+};
 
-// Mobile Navigation Toggle
+
+// mobile nav
 navOpen.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
-// Dropdown Menu Toggle
-const dropDowns = document.querySelectorAll(".js-sub_menu");
-dropDowns.forEach(dropDown => {
-    dropDown.addEventListener("click", (event) => {
-        const target = event.target;
-        const className = "active";
-        const iconClass = "opened";
 
-        showDn.forEach(menu => menu.classList.toggle(className, target.parentNode.contains(menu)));
-        iconDn.forEach(icon => icon.classList.toggle(iconClass, target.parentNode.contains(icon)));
+// Drop Down
+const dropDown = document.querySelectorAll(".js-sub_menu");
+const showDn = document.querySelectorAll(".sub-menu");
+const iconDn = document.querySelectorAll(".uil-angle-down");
+
+function handleClick(event) {
+    const { target } = event;
+    const className = "active",
+    iconClass = "opened";
+
+    let myContent = null;
+    let icon = null;
+    showDn.forEach(elem => {
+        if (target.parentNode.contains(elem)) {
+            myContent = elem;
+        } else {
+            elem.classList.remove(className);
+        }
     });
-});
 
-// Back to Top Button and Progress Bar
+    if (myContent) myContent.classList.toggle(className);
+    iconDn.forEach(elem => {
+        if (target.parentNode.contains(elem)) {
+            icon = elem;
+        } else {
+            elem.classList.remove(iconClass);
+        }
+    });
+    if (icon) icon.classList.toggle(iconClass);
+}
+
+dropDown.forEach(elem => elem.addEventListener("click",  handleClick));
+
+// Back to Top
 const showOnPx = 100;
 const backToTopButton = document.querySelector(".back-to-top");
 const pageProgressBar = document.querySelector(".progress");
 
-const scrollContainer = () => document.documentElement || document.body;
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
+
+const goToTop = () => {
+  document.body.scrollIntoView({
+    behavior: "smooth"
+  });
+};
 
 document.addEventListener("scroll", () => {
-    const scrolledPercentage = (scrollContainer().scrollTop / (scrollContainer().scrollHeight - scrollContainer().clientHeight)) * 100;
-    pageProgressBar.style.width = `${scrolledPercentage}%`;
+//   console.log("Scroll Height: ", scrollContainer().scrollHeight);
+//   console.log("Client Height: ", scrollContainer().clientHeight);
 
-    backToTopButton.classList.toggle("hidden", scrollContainer().scrollTop <= showOnPx);
+  const scrolledPercentage =
+    (scrollContainer().scrollTop /
+      (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+    100;
+
+  pageProgressBar.style.width = `${scrolledPercentage}%`;
+
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove("hidden");
+  } else {
+    backToTopButton.classList.add("hidden");
+  }
 });
 
-backToTopButton.addEventListener("click", () => {
-    document.body.scrollIntoView({ behavior: "smooth" });
-});
+backToTopButton.addEventListener("click", goToTop);
 
-// Cookie Handling
-const cookieWrb = document.querySelector(".cookie");
-const btnAction = cookieWrb.querySelector(".btn-actions button");
+// Cookie
+const cookieWrb = document.querySelector(".cookie"),
+btnAction = cookieWrb.querySelector(".btn-actions button");
 
-if (window.location.host) {
-    btnAction.addEventListener("click", () => {
+if(window.location.host) {
+    btnAction.onclick = () => {
+        // set cookie for 1 month and after that time expire automatically
         document.cookie = "OraKs=com; max-age=" + 60 * 60 * 24 * 30;
-        if (document.cookie) {
-            setTimeout(() => cookieWrb.classList.add("hide"), 500);
+        if(document.cookie) {
+            setTimeout(() => {
+                cookieWrb.classList.add("hide");
+            }, 500);
         } else {
             alert("Cookie can't be set!");
         }
-    });
-
-    cookieWrb.classList.toggle("hide", document.cookie.indexOf("OraKs=com") !== -1);
+    }
+    
+    let checkforCookie = document.cookie.indexOf("OraKs=com");
+    checkforCookie != -1 ? cookieWrb.classList.add("hide") : cookieWrb.classList.remove("hide");
 } else {
     cookieWrb.classList.add("hide");
 }
 
-// Update Year
+// Year
 year.innerText = new Date().getFullYear();
+      
