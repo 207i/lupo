@@ -656,6 +656,10 @@ body.dark .dark-light i.moon {
     grid-auto-rows: repeat(5, minmax(80px, 100px));
 }
 
+.link-bg1 a {
+    color: dodgerblue;	
+}
+
 .cat-box {
     width: auto;
     height: 70px;
